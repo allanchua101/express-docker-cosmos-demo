@@ -1,4 +1,6 @@
 {
-  "dbURL": "Your endpoint URL here.",
-  "dbKey": "Your db key here."
+  "dbURI": "Your endpoint URI here.",
+  "dbKey": "Your cosmos account key here.",
+  "dbName": "inventory",
+  "container": "products"
 }
