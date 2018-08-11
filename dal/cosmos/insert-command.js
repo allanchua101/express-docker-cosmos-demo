@@ -24,8 +24,8 @@ module.exports = {
    * @description Method used for adding an item to a collection.
    * 
    * @param {Object} item - The item to add in the collection.
-   * @param {number} id - The id of the product.
-   * @param {string} name - The name of the product.
+   * @param {number} item.id - The id of the product.
+   * @param {string} item.name - The name of the product.
    * 
    * @return Promise<void>
    */
