@@ -25,7 +25,7 @@ module.exports = {
    * @description Method used for updating an item 
    *              from a Cosmos DB collection.
    * 
-   * @param {Object} item - The item to remove from the collection.
+   * @param {Object} item - The item to replace from the collection.
    * @param {number} item.id - The id of the product.
    * @param {number} item.name - The name of the product.
    * 
