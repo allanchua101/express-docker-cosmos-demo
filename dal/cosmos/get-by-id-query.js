@@ -7,10 +7,22 @@ let buildClient = () => {
     endpoint: dbURI,
     auth: { masterKey: dbKey }
   });
-}
+};
+
+let buildQuery = id => {
+  return {
+    query: "SELECT r.id, r.name FROM root r WHERE r.id = @id",
+    parameters: [
+      {
+        name: "@id",
+        value: id
+      }
+    ]
+  };
+};
 
 /**
- * @module insertItemCommand.
+ * @module getByIDQuery.
  * @description Module that enables you to get products by their IDs.
  * @author Allan A. Chua
  * @version 1.0
@@ -35,22 +47,12 @@ module.exports = {
    */
   async execute(params) {
     try {
-      const querySpec = {
-        query: "SELECT r.id, r.name FROM root r WHERE r.id = @id",
-        parameters: [
-          {
-            name: "@id",
-            value: params.id
-          }
-        ]
-      };
-
       let { result } = await buildClient()
-        .database(dbName)
-        .container(container)
-        .items
-        .query(querySpec)
-        .toArray();
+                                .database(dbName)
+                                .container(container)
+                                .items
+                                .query(buildQuery(params.id))
+                                .toArray();
 
       return result[0];
     } catch (error) {

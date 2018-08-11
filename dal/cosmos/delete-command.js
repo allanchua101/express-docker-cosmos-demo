@@ -38,7 +38,7 @@ module.exports = {
               .delete(item);
     } catch (error) {
       console.log(
-        `Item addition to client failed: ${error.message}`
+        `Item deletion from collection failed: ${error.message}`
       );
     }
   }
