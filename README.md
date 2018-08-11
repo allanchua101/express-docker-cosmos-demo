@@ -21,5 +21,5 @@ build --tag pogs/inventory-api .
 docker images --all
 
 # Instantiate a container out of the image you built.
-docker run -p 3000:3000 --name inventory-api pogs/inventory-api
+docker run -p 3001:3001 --name inventory-api pogs/inventory-api
 ```
