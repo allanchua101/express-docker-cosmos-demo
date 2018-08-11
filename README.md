@@ -1,4 +1,4 @@
-# Containerized API Server using Express JS + Cosmos SQL Client.
+# Containerized API Server using Express JS + Cosmos SQL API.
 
 This repository showcases how to build a containerized API server using Express JS and Cosmos DB. It also stands as a complementary repository for the article I wrote.
 
